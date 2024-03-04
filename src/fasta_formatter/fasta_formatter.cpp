@@ -98,12 +98,13 @@ void parse_command_line(int argc, char* argv[])
 	int opt;
 
 	while ( (opt = getopt(argc, argv, "i:o:hw:te") ) != -1 ) {
-		
+
 		//Parse the default options
 		switch(opt) {
 		case 'h':
 			usage();
-		
+		    break;
+
 		case 'i':
 			input_filename = optarg;
 			break;
@@ -125,7 +126,7 @@ void parse_command_line(int argc, char* argv[])
 		case 'e':
 			flag_output_empty_sequences = true;
 			break;
-			
+
 		default:
 			exit(1);
 		}
@@ -153,7 +154,7 @@ int main(int argc, char* argv[])
 	} else {
 		if ( flag_requested_output_width == 0 )
 			pWriter = new SingleLineFastaWriter ( output.stream() ) ;
-		else 
+		else
 			pWriter = new MultiLineFastaWriter ( output.stream(), flag_requested_output_width ) ;
 	}
 	if (!flag_output_empty_sequences) {
@@ -172,7 +173,7 @@ int main(int argc, char* argv[])
 	while ( reader.next_line() ) {
 
 		const string &line = reader.line_string();
-		
+
 		if ( line.length()==0 )
 			continue;
 
@@ -182,8 +183,8 @@ int main(int argc, char* argv[])
 				first_line = false;
 			else
 				pWriter->write ( sequence_id, sequence_bases ) ;
-			
-			// Start new sequence 
+
+			// Start new sequence
 			sequence_id = line ;
 			sequence_bases.clear();
 			sequence_bases.resize ( max_length * 2 ) ;
