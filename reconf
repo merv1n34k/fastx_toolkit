@@ -23,4 +23,6 @@ echo "- autoheader."
 autoheader
 echo "- automake."
 automake -a
+echo "- autoupdate again."
+autoupdate
 exit
