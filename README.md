@@ -1,11 +1,13 @@
 # FASTX-Toolkit
 
-***
-***FASTX TOOLKIT is unmaintained software.***
-***No new features have been added since 2010.***
 
-*There are many better alternatives for low-level FASTQ/FASTA manipulation. Use at your own risk.*
-***
+```
+FASTX TOOLKIT is unmaintained software.
+No new features have been added since 2010.
+
+There are many better alternatives for low-level FASTQ/FASTA manipulation. Use at your own risk.
+```
+
 
 ## Short Summary
 
@@ -146,9 +148,10 @@ When running the barcode-splitter tool from the command line you specify a
 prefix direcotry - the output files will be written to that directory (similar
 to GNU's split program usage).
 
-## Licenses
-
+## LICENSE
 FASTX-Toolkit is distributed under the Affero GPL version 3 or later (AGPLv3),
+
+*(notes from author)*
 
 While IANAL, these licenses basically mean that:
 1. You're free to use FASTX-toolkit,
@@ -164,8 +167,9 @@ While IANAL, these licenses basically mean that:
    or as a web-based server - you must make the modified source code freely
    available (free as in speech).
 
-See the COPYING file for the full Affero GPL.
+See the [LICENSE](LICENSE) file for the full Affero GPL.
 
+```
 Please remember:
   THERE IS NO WARRANTY FOR THE PROGRAM, TO THE EXTENT PERMITTED BY
 APPLICABLE LAW.  EXCEPT WHEN OTHERWISE STATED IN WRITING THE COPYRIGHT
@@ -175,7 +179,7 @@ THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
 PURPOSE.  THE ENTIRE RISK AS TO THE QUALITY AND PERFORMANCE OF THE PROGRAM
 IS WITH YOU.  SHOULD THE PROGRAM PROVE DEFECTIVE, YOU ASSUME THE COST OF
 ALL NECESSARY SERVICING, REPAIR OR CORRECTION.
-
+```
 
 ---
 Please send all comments, suggestions, bug reports (or better yet - bug fixes)
@@ -184,3 +188,4 @@ to assafgordon@gmail.com .
 ## Changes made
 
 * Removed galaxy part of the fastx_toolkit
+* Moved project from Autotools to Cmake
