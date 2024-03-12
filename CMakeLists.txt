@@ -3,13 +3,16 @@ project(fastx_toolkit VERSION 0.0.14
     LANGUAGES C CXX
     )
 
+# Include required CMAKE modules
+include(FindPkgConfig)
+
+# Create insterface library for compiler flags
 add_library(compiler_flags INTERFACE)
 
 configure_file(config.h.in config.h)
 
 # Specify that any target linking to this library requires C++11 support
 target_compile_features(compiler_flags INTERFACE cxx_std_11)
-
 
 # Options
 option(ENABLE_WALL "Enable many common GCC warnings" ON)
@@ -20,6 +23,8 @@ option(ENABLE_ALL_STATIC "Build completely static (standalone) binaries" OFF)
 add_library(compiler_options INTERFACE)
 add_subdirectory(src)
 add_subdirectory(scripts)
+
+pkg_search_module(GTEXTUTILS REQUIRED gtextutils)
 
 # Common GCC warnings
 if(ENABLE_WALL)

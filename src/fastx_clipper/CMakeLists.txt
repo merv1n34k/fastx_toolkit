@@ -5,6 +5,7 @@ add_executable(fastx_clipper
 # Ensure the executable can find the libfastx headers
 target_include_directories(fastx_clipper PRIVATE
     ${PROJECT_SOURCE_DIR}/src/libfastx
+    ${PROJECT_BINARY_DIR}
 )
 
 # Link the executable against libfastx

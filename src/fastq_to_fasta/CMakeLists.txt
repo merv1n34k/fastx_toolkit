@@ -5,6 +5,7 @@ add_executable(fastq_to_fasta
 # Ensure the executable can find the libfastx headers
 target_include_directories(fastq_to_fasta PRIVATE
     ${PROJECT_SOURCE_DIR}/src/libfastx
+    ${PROJECT_BINARY_DIR}
 )
 
 # Link the executable against libfastx
