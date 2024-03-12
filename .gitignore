@@ -3,14 +3,6 @@ syntax: glob
 ## vim temporary files
 .*.swp
 
-## GNU auto-tools generated files
-config.h
-config.h.in
-config.log
-config.status
-config/ltmain.sh
-config/compile
-
 INSTALL
 
 ## Distribution tarballs
@@ -20,13 +12,6 @@ fastx*.tar.bz2
 *.o
 *.a
 *.Po
-Makefile
-Makefile.in
-libtool
-*.m4
-autom4te.cache/*
-configure
-stamp-h1
 
 ## The compiled binaries
 src/fastx_collapser/fastx_collapser
@@ -48,3 +33,14 @@ src/fastq_masker/fastq_masker
 
 # .DS_Store
 .DS_Store
+
+# ignore any logs
+
+/*/*.log
+
+*.log
+
+# ignore build/ directory
+
+build/
+
