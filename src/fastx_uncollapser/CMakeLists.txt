@@ -12,5 +12,6 @@ target_include_directories(fastx_uncollapser PRIVATE
 # Link the executable against libfastx
 target_link_libraries(fastx_uncollapser PRIVATE
     libfastx
+    ${GTEXTUTILS_LIBRARIES}
 )
 

@@ -13,5 +13,6 @@ target_include_directories(fasta_formatter PRIVATE
 # Link the executable against libfastx
 target_link_libraries(fasta_formatter PRIVATE
     libfastx
+    ${GTEXTUTILS_LIBRARIES}
 )
 
