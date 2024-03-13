@@ -24,8 +24,6 @@ add_library(compiler_options INTERFACE)
 add_subdirectory(src)
 add_subdirectory(scripts)
 
-# Just for test!
-set(ENV{PKG_CONFIG_PATH} "/usr/local/lib/pkgconfig:$ENV{PKG_CONFIG_PATH}")
 pkg_search_module(GTEXTUTILS REQUIRED gtextutils)
 
 # Common GCC warnings
