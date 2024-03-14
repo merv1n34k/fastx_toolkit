@@ -26,6 +26,9 @@ add_subdirectory(scripts)
 
 pkg_search_module(GTEXTUTILS REQUIRED gtextutils)
 
+# create variable to store GTEXTUTILS_LIBRARIES
+set(libgtextutils ${GTEXTUTILS_LIBRARIES})
+
 # Common GCC warnings
 if(ENABLE_WALL)
   target_compile_options(compiler_options INTERFACE
