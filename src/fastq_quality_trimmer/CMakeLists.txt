@@ -13,4 +13,6 @@ target_link_libraries(fastq_quality_trimmer PRIVATE
     libfastx
 )
 
-
+install(TARGETS fastq_quality_trimmer
+    RUNTIME DESTINATION bin
+)

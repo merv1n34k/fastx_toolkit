@@ -12,3 +12,7 @@ target_include_directories(fastx_trimmer PRIVATE
 target_link_libraries(fastx_trimmer PRIVATE
     libfastx
 )
+
+install(TARGETS fastx_trimmer
+    RUNTIME DESTINATION bin
+)

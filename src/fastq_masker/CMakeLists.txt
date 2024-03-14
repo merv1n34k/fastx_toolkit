@@ -12,3 +12,7 @@ target_include_directories(fastq_masker PRIVATE
 target_link_libraries(fastq_masker PRIVATE
     libfastx
 )
+
+install(TARGETS fastq_masker
+    RUNTIME DESTINATION bin
+)

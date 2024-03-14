@@ -13,5 +13,7 @@ target_link_libraries(fastq_quality_converter PRIVATE
     libfastx
 )
 
-
+install(TARGETS fastq_quality_converter
+    RUNTIME DESTINATION bin
+)
 

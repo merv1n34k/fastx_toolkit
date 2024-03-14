@@ -13,3 +13,6 @@ target_link_libraries(seqalign_test PRIVATE
     libfastx
 )
 
+install(TARGETS seqalign_test
+    RUNTIME DESTINATION bin
+)

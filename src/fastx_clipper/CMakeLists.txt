@@ -12,3 +12,7 @@ target_include_directories(fastx_clipper PRIVATE
 target_link_libraries(fastx_clipper PRIVATE
     libfastx
 )
+
+install(TARGETS fastx_clipper
+    RUNTIME DESTINATION bin
+)

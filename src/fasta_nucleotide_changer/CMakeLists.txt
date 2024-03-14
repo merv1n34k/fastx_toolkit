@@ -13,3 +13,6 @@ target_link_libraries(fasta_nucleotide_changer PRIVATE
     libfastx
 )
 
+install(TARGETS fasta_nucleotide_changer
+    RUNTIME DESTINATION bin
+)

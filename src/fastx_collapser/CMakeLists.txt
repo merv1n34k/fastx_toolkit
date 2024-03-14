@@ -1,6 +1,5 @@
 add_executable(fastx_collapser
     fastx_collapser.cpp
-    std_hash.h
 )
 
 # Ensure the executable can find the libfastx headers
@@ -13,3 +12,8 @@ target_include_directories(fastx_collapser PRIVATE
 target_link_libraries(fastx_collapser PRIVATE
     libfastx
 )
+
+install(TARGETS fastx_collapser
+    RUNTIME DESTINATION bin
+)
+

@@ -12,3 +12,7 @@ target_include_directories(fastx_quality_stats PRIVATE
 target_link_libraries(fastx_quality_stats PRIVATE
     libfastx
 )
+
+install(TARGETS fastx_quality_stats
+    RUNTIME DESTINATION bin
+)

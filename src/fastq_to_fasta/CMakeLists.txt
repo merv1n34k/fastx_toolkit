@@ -13,3 +13,6 @@ target_link_libraries(fastq_to_fasta PRIVATE
     libfastx
 )
 
+install(TARGETS fastq_to_fasta
+    RUNTIME DESTINATION bin
+)

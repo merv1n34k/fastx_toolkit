@@ -5,6 +5,7 @@ project(fastx_toolkit VERSION 0.0.14
 
 # Include required CMAKE modules
 include(FindPkgConfig)
+include(GNUInstallDirs)
 
 # Create insterface library for compiler flags
 add_library(compiler_flags INTERFACE)

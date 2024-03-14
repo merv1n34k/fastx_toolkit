@@ -1,4 +1,6 @@
-add_executable(fasta_formatter fasta_formatter.cpp)
+add_executable(fasta_formatter
+    fasta_formatter.cpp
+)
 
 # Ensure the executable can find the libfastx headers
 target_include_directories(fasta_formatter PRIVATE
@@ -10,5 +12,9 @@ target_include_directories(fasta_formatter PRIVATE
 target_link_libraries(fasta_formatter PRIVATE
     libfastx
     libgtextutils
+)
+
+install(TARGETS fasta_formatter
+    RUNTIME DESTINATION bin
 )
 

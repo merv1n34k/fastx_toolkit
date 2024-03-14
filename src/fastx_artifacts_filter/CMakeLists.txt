@@ -12,3 +12,7 @@ target_include_directories(fastx_artifacts_filter PRIVATE
 target_link_libraries(fastx_artifacts_filter PRIVATE
     libfastx
 )
+
+install(TARGETS fastx_artifacts_filter
+    RUNTIME DESTINATION bin
+)

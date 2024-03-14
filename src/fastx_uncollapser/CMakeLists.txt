@@ -1,4 +1,6 @@
-add_executable(fastx_uncollapser fastx_uncollapser.cpp)
+add_executable(fastx_uncollapser
+    fastx_uncollapser.cpp
+)
 
 # Ensure the executable can find the libfastx headers
 target_include_directories(fastx_uncollapser PRIVATE
@@ -12,3 +14,6 @@ target_link_libraries(fastx_uncollapser PRIVATE
     libgtextutils
 )
 
+install(TARGETS fastx_uncollapser
+    RUNTIME DESTINATION bin
+)

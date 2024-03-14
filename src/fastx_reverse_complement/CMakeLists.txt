@@ -13,3 +13,7 @@ target_link_libraries(fastx_reverse_complement PRIVATE
     libfastx
 )
 
+install(TARGETS fastx_reverse_complement
+    RUNTIME DESTINATION bin
+)
+

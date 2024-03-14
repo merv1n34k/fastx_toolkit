@@ -12,3 +12,7 @@ target_include_directories(fastx_renamer PRIVATE
 target_link_libraries(fastx_renamer PRIVATE
     libfastx
 )
+
+install(TARGETS fastx_renamer
+    RUNTIME DESTINATION bin
+)
