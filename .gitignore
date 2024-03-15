@@ -6,7 +6,7 @@ syntax: glob
 INSTALL
 
 ## Distribution tarballs
-fastx*.tar.bz2
+fastx*.tar.gz
 
 # .DS_Store
 .DS_Store
