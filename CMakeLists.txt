@@ -23,7 +23,8 @@ option(ENABLE_ALL_STATIC "Build completely static (standalone) binaries" OFF)
 # Interface Library for Compiler Options
 add_library(compiler_options INTERFACE)
 add_subdirectory(src)
-add_subdirectory(scripts)
+# Temporally disable the scripts directory
+#add_subdirectory(scripts)
 
 pkg_search_module(GTEXTUTILS REQUIRED gtextutils)
 
