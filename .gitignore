@@ -6,7 +6,7 @@ syntax: glob
 INSTALL
 
 ## Distribution tarballs
-fastx*.tar.bz2
+fastx*.tar.gz
 
 ## Intermediate files
 *.o
@@ -43,4 +43,3 @@ src/fastq_masker/fastq_masker
 # ignore build/ directory
 
 build/
-
