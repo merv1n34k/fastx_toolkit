@@ -54,6 +54,7 @@ else()
   target_compile_options(compiler_options INTERFACE -O3)
 endif()
 
+# all-static mode
 if(ENABLE_ALL_STATIC)
     # Setting linker flags to enable static binaries
     set(CMAKE_EXE_LINKER_FLAGS_INIT "-static" CACHE STRING "Initial linker flags.")

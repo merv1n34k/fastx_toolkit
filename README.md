@@ -1,15 +1,10 @@
-# FASTX-Toolkit
+# FASTX-TOOLKIT
 
-```
-FASTX TOOLKIT is unmaintained software.
-No new features have been added since 2010.
-
-There are many better alternatives for low-level FASTQ/FASTA manipulation. Use at your own risk.
-```
+**This version of `fastx_toolkit` has been transferred to modern version of Cmake, Perl scripts are *temporally* dropped from support.**
 
 ## Short Summary
 
-The FASTX-Toolkit is a collection of command line tools for Short-Reads
+The `fastx_toolkit` is a collection of command line tools for Short-Reads
 FASTA/FASTQ files preprocessing.
 
 ## More Details
@@ -21,7 +16,7 @@ The main processing of such FASTA/FASTQ files is mapping (aka aligning)
 the sequences to reference genomes or other databases using specialized
 programs.
 
-Example of such mapping programs are:
+Example of such mapping programs are *(many of them are unmaintained)*:
 * [Blat](http://www.kentinformatics.com/index.asp),
 * [SHRiMP](http://compbio.cs.toronto.edu/shrimp),
 * [LastZ](http://www.bx.psu.edu/miller_lab),
@@ -33,7 +28,7 @@ It is sometimes more productive to preprocess the FASTA/FASTQ files before
 mapping the sequences to the genome - manipulating the sequences to
 produce better mapping results.
 
-The FASTX-Toolkit tools perform some of these preprocessing tasks.
+The `fastx_toolkit` tools perform some of these preprocessing tasks.
 
 ## Available Tools
 
@@ -80,10 +75,11 @@ The FASTX-Toolkit tools perform some of these preprocessing tasks.
 
 1. Cmake >= 3.15
 
-2. GCC is required to compile most tools.
+2. GCC (passing on 13.2.0), but probably >= 6 will be sufficient
 
-3. The `libgtextutils` package is required to build `fasta_formatter` and `fastx_uncollapser` required, see [this](https://github.com/merv1n34k/libgtextutils.git) GitHub repository.
+3. Pkg-config (passing on 0.29.2)
 
+4. The `libgtextutils` package is required to build `fasta_formatter` and `fastx_uncollapser` tools, see [this](https://github.com/merv1n34k/libgtextutils.git) GitHub repository.
 
 ## Installation
 
@@ -101,7 +97,8 @@ To install the tools one can do the following:
 If you are on macOS *(and probably Linux)* you can use [Homebrew](https://brew.sh/):
 
 ```bash
-   $ brew install merv1n34k/homebrew-tap/fastx_toolkit
+   $ brew tap merv1n34k/tap
+   $ brew install merv1n34k/tap/fastx_toolkit
 ```
 
 ## Command Line Usage
@@ -109,46 +106,30 @@ If you are on macOS *(and probably Linux)* you can use [Homebrew](https://brew.s
 Most tools support "-h" argument to show a short help screen.
 Better documentation is not available at this moment.
 
-## Special configuration for Barcode-Splitter
-
-When running the barcode-splitter tool from the command line you specify a
-prefix direcotry - the output files will be written to that directory (similar
-to GNU's split program usage).
-
 ## LICENSE
-FASTX-Toolkit is distributed under the Affero GPL version 3 or later (AGPLv3),
+Distributed under the Affero GPL version 3 or later (AGPLv3), see LICENSE.
 
-*(notes from author)*
+## Notes from author
 
-While IANAL, these licenses basically mean that:
-1. You're free to use FASTX-toolkit,
+Assaf Gordon designed and implemented `fastx_toolkit`.
 
-2. If you modify the FASTX-toolkit tools, and make those modifications
-   publicly available (either as downloadable tools, part of another product),
-   or as a web-based server - you must make the modified source code freely
-   available (free as in speech).
+Many people have further contributed to `fastx_toolkit` by reporting problems,
+suggesting various improvements, or submitting actual code. Here is
+a list of these people. Help me keep it complete and exempt of errors.
 
-See the [LICENSE](LICENSE) file for the full Affero GPL.
-
-```
-Please remember:
-  THERE IS NO WARRANTY FOR THE PROGRAM, TO THE EXTENT PERMITTED BY
-APPLICABLE LAW.  EXCEPT WHEN OTHERWISE STATED IN WRITING THE COPYRIGHT
-HOLDERS AND/OR OTHER PARTIES PROVIDE THE PROGRAM "AS IS" WITHOUT WARRANTY
-OF ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING, BUT NOT LIMITED TO,
-THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
-PURPOSE.  THE ENTIRE RISK AS TO THE QUALITY AND PERFORMANCE OF THE PROGRAM
-IS WITH YOU.  SHOULD THE PROGRAM PROVE DEFECTIVE, YOU ASSUME THE COST OF
-ALL NECESSARY SERVICING, REPAIR OR CORRECTION.
-```
+Many Hannon-lab members at CSHL (who preferred to remain anonymous).
 
 ---
+
 Please send all comments, suggestions, bug reports (or better yet - bug fixes)
 to assafgordon@gmail.com.
 
+## Notes from me
+Feel free to open issues in this repository, PRs are appreciated :3
+
 ## Changes made
 
-* Removed galaxy part of the fastx_toolkit
+* Removed galaxy part of the `fastx_toolkit`
 * Moved project from Autotools to Cmake
 * Updated README
 * Added Homebrew installation instruction
