@@ -1,6 +1,6 @@
 # FASTX-TOOLKIT
 
-**This version of `fastx_toolkit` has been transferred to modern version of Cmake, Perl scripts are *temporally* dropped from support.**
+**This version of `fastx_toolkit` has been transferred to a modern version of Cmake, Perl scripts are *temporally* dropped from support.**
 
 ## Short Summary
 
@@ -88,7 +88,6 @@ To install the tools one can do the following:
 ```bash
    $ git clone https://github.com/merv1n34k/fastx_toolkit
    $ cd fastx_toolkit
-   $ git checkout homebrew
    $ mkdir build && cd build
    $ cmake ..
    $ make install
