@@ -1,0 +1,20 @@
+# Library directory
+add_subdirectory(libfastx)
+
+# binary directory
+add_subdirectory(fastq_quality_trimmer)
+add_subdirectory(fastx_reverse_complement)
+add_subdirectory(fastq_to_fasta)
+add_subdirectory(fastx_trimmer)
+add_subdirectory(fasta_formatter)
+add_subdirectory(fastx_artifacts_filter)
+add_subdirectory(fastx_uncollapser)
+add_subdirectory(fasta_nucleotide_changer)
+add_subdirectory(fastx_clipper)
+add_subdirectory(fastq_masker)
+add_subdirectory(fastx_collapser)
+add_subdirectory(seqalign_test)
+add_subdirectory(fastq_quality_converter)
+add_subdirectory(fastx_quality_stats)
+add_subdirectory(fastq_quality_filter)
+add_subdirectory(fastx_renamer)
